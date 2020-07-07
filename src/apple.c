@@ -8,7 +8,6 @@ int Apple(int x){
    int y = 0;
    
    for(int i = 0; i < n; i++){
-       printf("%d", A[i]);
        if(A[i]%A[x] == 0) y += A[i]/A[x];
        else y += A[i]/A[x] + 1;
    }

@@ -8,8 +8,8 @@ int Apple(int x){
    int y = 0;
    
    for(int i = 0; i < n; i++){
-       if(A[i]%A[x] == 0) y += A[i]/A[x];
-       else y += A[i]/A[x] + 1;
+       if(A[i]%x == 0) y += A[i]/x;
+       else y += A[i]/x + 1;
    }
    return y <= k;
 }
@@ -20,8 +20,8 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = -1;
-  ub = n-1;
+  lb = 0;
+  ub = 1000000000;
   
   while(ub -lb >1){
       int mid = (ub + lb) /2;
@@ -30,6 +30,6 @@ int main(){
       else lb = mid;
   }
 
-  printf("%d\n", A[ub]);
+  printf("%d\n", ub);
   return 0;
 }

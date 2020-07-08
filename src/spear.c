@@ -16,7 +16,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 lb = 0;
-ub =A[n-1];
+ub =1000000001;
 while(ub - lb >1){
    int mid = (ub + lb) / 2;
    if(spear(mid)) ub = mid;
